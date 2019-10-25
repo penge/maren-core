@@ -21,8 +21,11 @@ function loadTheme(themeLocation) {
   try {
     name = themeLocation.split(path.sep).pop();
     template = require(path.join(themeLocation, 'template.js'));
-  } catch (e) {
-    return undefined; // template.js is required
+  } catch (err) {
+    if (err.code === 'MODULE_NOT_FOUND') {
+      return undefined; // template.js is required
+    }
+    throw err; // template.js exists but is invalid
   }
 
   // Load options.json
