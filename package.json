@@ -22,7 +22,7 @@
   "homepage": "https://maren.io",
   "dependencies": {
     "markdown-toc": "1.2.0",
-    "marked": "0.7.0",
+    "marked": "4.0.10",
     "toc-to-html": "^0.2.1",
     "yaml-front-matter": "4.0.0"
   },
